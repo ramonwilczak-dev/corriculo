@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos - Ramon</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f9; margin: 0; padding: 30px; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; }
+        .project { margin: 25px 0; padding: 20px; border: 1px solid #ddd; border-radius: 12px; }
+        .project h3 { color: #3498db; }
+        a.back { color: #3498db; font-weight: bold; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Meus Projetos</h1>
+        <p id="subtitle" style="margin-bottom:30px; font-size:1.1rem;"></p>
+
+        <div id="projectsList"></div>
+
+        <a href="index.html" class="back">← Voltar ao Currículo</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const skill = params.get('skill') || 'Todos';
+
+        const title = document.getElementById('title');
+        const subtitle = document.getElementById('subtitle');
+        const list = document.getElementById('projectsList');
+
+        title.textContent = `Projetos em ${skill}`;
+
+        const projects = {
+            "HTML5": [
+                { name: "Landing Page Moderna", desc: "Página de vendas responsiva para uma startup fictícia." },
+                { name: "Portfolio Pessoal", desc: "Site completo com animações e seções interativas." }
+            ],
+            "CSS3": [
+                { name: "Dashboard UI", desc: "Interface administrativa com tema escuro e claro." },
+                { name: "E-commerce Layout", desc: "Loja online completa com grid avançado." }
+            ],
+            "JavaScript": [
+                { name: "To-Do List Avançada", desc: "Aplicação com drag & drop, filtro e armazenamento local." },
+                { name: "Calculadora Financeira", desc: "Simulador de investimentos com gráficos." }
+            ],
+            "GitHub": [
+                { name: "Controle de Versionamento", desc: "Repositório completo com branches e Pull Requests simulados." },
+                { name: "Colaboração em Equipe", desc: "Projeto open-source fictício com 5 contribuidores." }
+            ],
+            "Python": [
+                { name: "Bot de Telegram", desc: "Assistente virtual para agendamento de consultas." },
+                { name: "Analisador de Dados", desc: "Script que processa planilhas e gera relatórios." }
+            ],
+            "Responsividade": [
+                { name: "App Mobile First", desc: "Aplicação que se adapta perfeitamente do celular ao desktop." },
+                { name: "Site de Notícias", desc: "Portal responsivo com menu hambúrguer e cards." }
+            ]
+        };
+
+        const selected = projects[skill] || Object.values(projects).flat();
+
+        selected.forEach(p => {
+            list.innerHTML += `
+                <div class="project">
+                    <h3>${p.name}</h3>
+                    <p>${p.desc}</p>
+                </div>`;
+        });
+
+        subtitle.textContent = `Aqui estão alguns projetos que desenvolvi na área de ${skill}.`;
+    </script>
+</body>
+</html>

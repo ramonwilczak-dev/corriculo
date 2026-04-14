@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramon - Currículo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.7;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+            border-radius: 0 0 25px 25px;
+        }
+        .profile-photo {
+            width: 180px; height: 180px;
+            border-radius: 50%;
+            border: 6px solid rgba(255,255,255,0.9);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        header h1 { font-size: 3.2rem; margin-bottom: 8px; }
+        header p { font-size: 1.35rem; opacity: 0.95; }
+
+        section {
+            background: white;
+            margin: 35px 0;
+            padding: 45px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 12px;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 22px;
+        }
+        .info-item { display: flex; align-items: center; gap: 14px; font-size: 1.05rem; }
+        .info-item strong { min-width: 110px; color: #2c3e50; }
+
+        .item { margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px solid #eee; }
+        .item:last-child { border-bottom: none; }
+        .item h3 { color: #3498db; margin-bottom: 6px; }
+        .date { font-size: 0.96rem; color: #666; font-style: italic; }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+        .skill {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .skill:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 15px rgba(52, 152, 219, 0.4);
+        }
+
+        .btn-download {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            transition: all 0.4s;
+        }
+        .btn-download:hover { background: #219653; transform: translateY(-5px); }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.4rem; }
+            .profile-photo { width: 140px; height: 140px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- CABEÇALHO -->
+        <header>
+            <img src="https://via.placeholder.com/180x180/3498db/ffffff?text=Ramon" 
+                 alt="Foto de Perfil" class="profile-photo">
+            <h1>Ramon Wilczak</h1>
+            <p>Desenvolvedor Web | Analista de Sistemas | Entusiasta de Tecnologia</p>
+        </header>
+
+        <!-- SOBRE MIM -->
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Profissional apaixonado por tecnologia com experiência em desenvolvimento web, criação de sistemas e resolução de problemas. Busco constantemente aprender novas tecnologias e entregar soluções de alta qualidade.</p>
+        </section>
+
+        <!-- INFORMAÇÕES PESSOAIS -->
+        <section id="contato">
+            <h2>Informações Pessoais</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>📍 Localização:</strong><span>Rio Bonito do Iguaçu - PR</span></div>
+                <div class="info-item"><strong>📧 E-mail:</strong><span>ramonwilczak5@gmail.com</span></div>
+                <div class="info-item"><strong>📱 Telefone:</strong><span>(42) 99925-8547</span></div>
+                <div class="info-item"><strong>🔗 LinkedIn:</strong><span>linkedin.com/in/ramonwilczak</span></div>
+                <div class="info-item"><strong>🐙 GitHub:</strong><span><a href="https://github.com/ramonwilczak-dev" target="_blank">github.com/ramonwilczak-dev</a></span></div>
+            </div>
+        </section>
+
+        <!-- EXPERIÊNCIA -->
+        <section id="experiencia">
+            <h2>Experiência Profissional</h2>
+            <div class="item">
+                <h3>Desenvolvedor Web Júnior</h3>
+                <p><strong>Empresa XYZ Tecnologia</strong> — Curitiba, PR</p>
+                <p class="date">2026 - Presente</p>
+                <ul><li>Desenvolvimento de interfaces responsivas</li><li>Manutenção de sistemas internos</li><li>Colaboração com design e backend</li></ul>
+            </div>
+            <div class="item">
+                <h3>Estagiário em Desenvolvimento</h3>
+                <p><strong>Tech Solutions LTDA</strong> — Laranjeiras do Sul, PR</p>
+                <p class="date">Janeiro 2025 - Julho 2025</p>
+                <ul><li>Criação de landing pages</li><li>Testes e correção de bugs</li><li>Suporte técnico</li></ul>
+            </div>
+        </section>
+
+        <!-- FORMAÇÃO -->
+        <section id="formacao">
+            <h2>Formação Acadêmica</h2>
+            <div class="item">
+                <h3>Técnico em Desenvolvimento de Sistemas</h3>
+                <!-- CLICÁVEL -->
+                <p><strong><a href="escola.html" target="_blank" style="color:#3498db; text-decoration:none;">CEEP Profª Naiana Babaresco de Souza</a></strong></p>
+                <p class="date">2024 - 2026 (em andamento)</p>
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills">
+                <a href="projetos.html?skill=HTML5" class="skill">HTML5</a>
+                <a href="projetos.html?skill=CSS3" class="skill">CSS3</a>
+                <a href="projetos.html?skill=JavaScript" class="skill">JavaScript</a>
+                <a href="projetos.html?skill=GitHub" class="skill">Git & GitHub</a>
+                <a href="projetos.html?skill=Python" class="skill">Python</a>
+                <a href="projetos.html?skill=Responsividade" class="skill">Responsividade</a>
+            </div>
+        </section>
+
+        <!-- DOWNLOAD -->
+        <div style="text-align: center; margin: 50px 0;">
+            <a href="#" class="btn-download">📄 Baixar Currículo em PDF</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
