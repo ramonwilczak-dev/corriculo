@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramon - Currículo</title>
+    <style>
+        /* ==================== ESTILOS CSS ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        /* Seções */
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        /* Informações pessoais */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Experiência e Formação */
+        .item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .item h3 {
+            color: #3498db;
+        }
+
+        .date {
+            font-size: 0.95rem;
+            color: #777;
+            font-style: italic;
+        }
+
+        /* Habilidades */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #3498db;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+        }
+
+        /* Botão de download */
+        .btn-download {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-download:hover {
+            background: #219653;
+            transform: translateY(-3px);
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ==================== CABEÇALHO ==================== -->
+        <header>
+            <h1>Ramon</h1>
+            <p>Desenvolvedor Web | Analista de Sistemas | Entusiasta de Tecnologia</p>
+        </header>
+
+        <!-- ==================== SOBRE MIM ==================== -->
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>
+                Profissional apaixonado por tecnologia com experiência em desenvolvimento web, 
+                criação de sistemas e resolução de problemas. Busco sempre aprender novas tecnologias 
+                e entregar soluções de alta qualidade.
+            </p>
+        </section>
+
+        <!-- ==================== INFORMAÇÕES PESSOAIS ==================== -->
+        <section id="contato">
+            <h2>Informações Pessoais</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>📍 Localização:</strong>
+                    <span>Rio Bonito do Iguaçu</span>
+                </div>
+                <div class="info-item">
+                    <strong>📧 E-mail:</strong>
+                    <span>ramonwilczak5@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <strong>📱 Telefone:</strong>
+                    <span>(41) 99925-8547</span>
+                </div>
+                <div class="info-item">
+                    <strong>🔗 LinkedIn:</strong>
+                    <span>linkedin.com/in/seu-perfil</span>
+                </div>
+                <div class="info-item">
+                    <strong>🐙 GitHub:</strong>
+                    <span>github.com/seuusuario</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EXPERIÊNCIA PROFISSIONAL ==================== -->
+        <section id="experiencia">
+            <h2>Experiência Profissional</h2>
+            
+            <div class="item">
+                <h3>Desenvolvedor Web Júnior</h3>
+                <p><strong>Empresa XYZ Tecnologia</strong> — Curitiba, PR</p>
+                <p class="date">2026</p>
+                <ul>
+                    <li>Desenvolvimento de interfaces responsivas com HTML, CSS </li>
+                    <li>Manutenção e melhoria de sistemas internos</li>
+                    <li>Colaboração com equipe de design e backend</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Estagiário em Desenvolvimento</h3>
+                <p><strong>Tech Solutions LTDA</strong> — Laranjeiras do Sul</p>
+                <p class="date">Janeiro 2025 - Julho 2025</p>
+                <ul>
+                    <li>Auxílio na criação de landing pages</li>
+                    <li>Testes e correção de bugs</li>
+                    <li>Suporte técnico aos usuários</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ==================== FORMAÇÃO ==================== -->
+        <section id="formacao">
+            <h2>Formação Acadêmica</h2>
+            
+            <div class="item">
+                <h3> Desenvolvimento de Sistemas</h3>
+                <p><strong>CEEP Prof Naiana Babavaresco de Souza</strong></p>
+                <p class="date">2026 (em andamento)</p>
+            </div>
+        </section>
+
+        <!-- ==================== HABILIDADES ==================== -->
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="skills">
+                <div class="skill">HTML5</div>
+                <div class="skill">CSS3</div>
+        
+                <div class="skill">GitHub</div>
+                <div class="skill">Python</div>
+              
+            </div>
+        </section>
+
+        <!-- ==================== BOTÃO DE DOWNLOAD ==================== -->
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="#" class="btn-download" onclick="alert('Em produção: aqui você colocaria o link do PDF do currículo')">
+                📄 Baixar Currículo em PDF
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+        // ==================== JAVASCRIPT ====================
+        // Este script pode ser expandido no futuro (ex: animações, modo escuro, etc.)
+
+        console.log("✅ Site de Currículo carregado com sucesso!");
+
+        // Exemplo: rolagem suave ao clicar em links (se você adicionar um menu no futuro)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
