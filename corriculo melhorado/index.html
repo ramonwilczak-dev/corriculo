@@ -3,101 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ramon - Currículo</title>
+    <meta name="description" content="Currículo profissional de Ramon Wilczak - Desenvolvedor Web Júnior">
+    <title>Ramon Wilczak | Desenvolvedor Web</title>
+    
     <style>
+        :root {
+            --primary: #3498db;
+            --dark: #2c3e50;
+            --accent: #27ae60;
+        }
+        
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f9;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #f8fafc;
             color: #333;
             line-height: 1.7;
         }
+        
         .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
 
         header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
+            background: linear-gradient(135deg, var(--dark), var(--primary));
             color: white;
-            padding: 70px 20px;
+            padding: 80px 20px 60px;
             text-align: center;
-            border-radius: 0 0 25px 25px;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
+        
         .profile-photo {
             width: 180px; height: 180px;
             border-radius: 50%;
-            border: 6px solid rgba(255,255,255,0.9);
+            border: 8px solid rgba(255,255,255,0.95);
             object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            margin-bottom: 25px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
         }
-        header h1 { font-size: 3.2rem; margin-bottom: 8px; }
-        header p { font-size: 1.35rem; opacity: 0.95; }
+        
+        header h1 { font-size: 3.4rem; font-weight: 700; margin-bottom: 10px; }
+        header p { font-size: 1.4rem; opacity: 0.95; }
 
         section {
             background: white;
-            margin: 35px 0;
-            padding: 45px;
-            border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            margin: 40px 0;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
         }
+        
         h2 {
-            color: #2c3e50;
-            border-bottom: 4px solid #3498db;
-            padding-bottom: 12px;
-            margin-bottom: 30px;
-            font-size: 1.8rem;
+            color: var(--dark);
+            font-size: 2rem;
+            margin-bottom: 35px;
+            padding-bottom: 15px;
+            border-bottom: 5px solid var(--primary);
         }
-
+        
         .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
         }
-        .info-item { display: flex; align-items: center; gap: 14px; font-size: 1.05rem; }
-        .info-item strong { min-width: 110px; color: #2c3e50; }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            font-size: 1.1rem;
+        }
+        
+        .info-item strong { min-width: 130px; color: var(--dark); font-weight: 600; }
 
-        .item { margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px solid #eee; }
+        .item {
+            margin-bottom: 32px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #eee;
+        }
+        
         .item:last-child { border-bottom: none; }
-        .item h3 { color: #3498db; margin-bottom: 6px; }
-        .date { font-size: 0.96rem; color: #666; font-style: italic; }
+        
+        .item h3 { color: var(--primary); font-size: 1.35rem; margin-bottom: 8px; }
+        .date { font-size: 0.95rem; color: #64748b; font-style: italic; }
 
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
         }
+        
         .skill {
-            background: linear-gradient(135deg, #3498db, #2980b9);
+            background: linear-gradient(135deg, var(--primary), #2980b9);
             color: white;
-            padding: 12px 24px;
+            padding: 14px 28px;
             border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 500;
+            font-size: 1.05rem;
+            font-weight: 600;
             text-decoration: none;
             transition: all 0.3s;
-            cursor: pointer;
         }
+        
         .skill:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 15px rgba(52, 152, 219, 0.4);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 20px rgba(52, 152, 219, 0.4);
         }
 
         .btn-download {
-            display: inline-block;
-            background: #27ae60;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent);
             color: white;
-            padding: 16px 36px;
+            padding: 18px 42px;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-top: 30px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-top: 40px;
+            box-shadow: 0 10px 25px rgba(39, 174, 96, 0.3);
             transition: all 0.4s;
         }
-        .btn-download:hover { background: #219653; transform: translateY(-5px); }
+        
+        .btn-download:hover { background: #219653; transform: translateY(-6px); }
 
         @media (max-width: 768px) {
-            header h1 { font-size: 2.4rem; }
-            .profile-photo { width: 140px; height: 140px; }
+            header h1 { font-size: 2.6rem; }
+            .profile-photo { width: 150px; height: 150px; }
         }
     </style>
 </head>
@@ -107,16 +139,16 @@
 
         <!-- CABEÇALHO -->
         <header>
-            <img src="https://via.placeholder.com/180x180/3498db/ffffff?text=Ramon" 
-                 alt="Foto de Perfil" class="profile-photo">
+            <img src="perfil.jpeg" 
+                 alt="Foto de Perfil Ramon Wilczak" class="profile-photo">
             <h1>Ramon Wilczak</h1>
-            <p>Desenvolvedor Web | Analista de Sistemas | Entusiasta de Tecnologia</p>
+            <p>Desenvolvedor Web Júnior | Analista de Sistemas</p>
         </header>
 
         <!-- SOBRE MIM -->
         <section id="sobre">
             <h2>Sobre Mim</h2>
-            <p>Profissional apaixonado por tecnologia com experiência em desenvolvimento web, criação de sistemas e resolução de problemas. Busco constantemente aprender novas tecnologias e entregar soluções de alta qualidade.</p>
+            <p>Profissional na área de tecnologia, com maior foco em desenvolvimento web e aprendizado contínuo. Busco desenvolver minhas habilidades por meio de estudos e projetos práticos, com objetivo de crescer profissionalmente e adquirir esperiência na área.  </p>
         </section>
 
         <!-- INFORMAÇÕES PESSOAIS -->
@@ -126,35 +158,41 @@
                 <div class="info-item"><strong>📍 Localização:</strong><span>Rio Bonito do Iguaçu - PR</span></div>
                 <div class="info-item"><strong>📧 E-mail:</strong><span>ramonwilczak5@gmail.com</span></div>
                 <div class="info-item"><strong>📱 Telefone:</strong><span>(42) 99925-8547</span></div>
-                <div class="info-item"><strong>🔗 LinkedIn:</strong><span>linkedin.com/in/ramonwilczak</span></div>
                 <div class="info-item"><strong>🐙 GitHub:</strong><span><a href="https://github.com/ramonwilczak-dev" target="_blank">github.com/ramonwilczak-dev</a></span></div>
             </div>
         </section>
 
-        <!-- EXPERIÊNCIA -->
+        <!-- EXPERIÊNCIA PROFISSIONAL -->
         <section id="experiencia">
             <h2>Experiência Profissional</h2>
             <div class="item">
                 <h3>Desenvolvedor Web Júnior</h3>
                 <p><strong>Empresa XYZ Tecnologia</strong> — Curitiba, PR</p>
                 <p class="date">2026 - Presente</p>
-                <ul><li>Desenvolvimento de interfaces responsivas</li><li>Manutenção de sistemas internos</li><li>Colaboração com design e backend</li></ul>
+                <ul>
+                    <li>Desenvolvimento de interfaces responsivas</li>
+                    <li>Manutenção de sistemas internos</li>
+                    <li>Colaboração com design e backend</li>
+                </ul>
             </div>
             <div class="item">
                 <h3>Estagiário em Desenvolvimento</h3>
                 <p><strong>Tech Solutions LTDA</strong> — Laranjeiras do Sul, PR</p>
                 <p class="date">Janeiro 2025 - Julho 2025</p>
-                <ul><li>Criação de landing pages</li><li>Testes e correção de bugs</li><li>Suporte técnico</li></ul>
+                <ul>
+                    <li>Criação de landing pages</li>
+                    <li>Testes e correção de bugs</li>
+                    <li>Suporte técnico</li>
+                </ul>
             </div>
         </section>
 
-        <!-- FORMAÇÃO -->
+        <!-- FORMAÇÃO ACADÊMICA -->
         <section id="formacao">
             <h2>Formação Acadêmica</h2>
             <div class="item">
                 <h3>Técnico em Desenvolvimento de Sistemas</h3>
-                <!-- CLICÁVEL -->
-                <p><strong><a href="escola.html" target="_blank" style="color:#3498db; text-decoration:none;">CEEP Profª Naiana Babaresco de Souza</a></strong></p>
+                <p><strong><a href="escola.html" style="color: var(--primary);">CEEP Profª Naiana Babaresco de Souza</a></strong></p>
                 <p class="date">2024 - 2026 (em andamento)</p>
             </div>
         </section>
@@ -173,11 +211,10 @@
         </section>
 
         <!-- DOWNLOAD -->
-        <div style="text-align: center; margin: 50px 0;">
+        <div style="text-align: center; margin: 60px 0;">
             <a href="#" class="btn-download">📄 Baixar Currículo em PDF</a>
         </div>
 
     </div>
-
 </body>
 </html>
