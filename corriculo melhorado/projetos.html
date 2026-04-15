@@ -3,20 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos - Ramon</title>
+    <title>Projetos | Ramon Wilczak</title>
+    
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f9; margin: 0; padding: 30px; }
-        .container { max-width: 1000px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; }
-        .project { margin: 25px 0; padding: 20px; border: 1px solid #ddd; border-radius: 12px; }
-        .project h3 { color: #3498db; }
-        a.back { color: #3498db; font-weight: bold; text-decoration: none; }
+        :root { --primary: #3498db; --dark: #2c3e50; }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #f8fafc;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        h1 { color: var(--dark); font-size: 2.8rem; margin-bottom: 8px; }
+        #subtitle { font-size: 1.25rem; color: #64748b; margin-bottom: 40px; }
+        
+        .project {
+            margin-bottom: 30px;
+            padding: 28px;
+            border: 2px solid #f1f5f9;
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+        
+        .project:hover {
+            border-color: var(--primary);
+            transform: translateY(-4px);
+        }
+        
+        .project h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 12px; }
+        
+        .back {
+            color: var(--primary);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 id="title">Meus Projetos</h1>
-        <p id="subtitle" style="margin-bottom:30px; font-size:1.1rem;"></p>
+        <p id="subtitle"></p>
 
         <div id="projectsList"></div>
 
@@ -27,11 +65,7 @@
         const params = new URLSearchParams(window.location.search);
         const skill = params.get('skill') || 'Todos';
 
-        const title = document.getElementById('title');
-        const subtitle = document.getElementById('subtitle');
-        const list = document.getElementById('projectsList');
-
-        title.textContent = `Projetos em ${skill}`;
+        document.getElementById('title').textContent = `Projetos em ${skill}`;
 
         const projects = {
             "HTML5": [
@@ -48,7 +82,7 @@
             ],
             "GitHub": [
                 { name: "Controle de Versionamento", desc: "Repositório completo com branches e Pull Requests simulados." },
-                { name: "Colaboração em Equipe", desc: "Projeto open-source fictício com 5 contribuidores." }
+                { name: "Colaboração em Equipe", desc: "Projeto open-source com 5 contribuidores." }
             ],
             "Python": [
                 { name: "Bot de Telegram", desc: "Assistente virtual para agendamento de consultas." },
@@ -62,6 +96,7 @@
 
         const selected = projects[skill] || Object.values(projects).flat();
 
+        const list = document.getElementById('projectsList');
         selected.forEach(p => {
             list.innerHTML += `
                 <div class="project">
@@ -70,7 +105,8 @@
                 </div>`;
         });
 
-        subtitle.textContent = `Aqui estão alguns projetos que desenvolvi na área de ${skill}.`;
+        document.getElementById('subtitle').textContent = 
+            `Aqui estão alguns projetos que desenvolvi na área de ${skill}.`;
     </script>
 </body>
 </html>
